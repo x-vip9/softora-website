@@ -185,6 +185,19 @@ async function post(url, data) {
 
 function showErr(el, msg) { el.style.display='block'; el.textContent=msg; }
 
+// تصدير الدوال للـ window (للاستخدام من HTML)
+window.showModal   = showModal;
+window.hideModal   = hideModal;
+window.switchModal = switchModal;
+window.doLogin     = doLogin;
+window.doRegister  = doRegister;
+window.logout      = logout;
+window.toggleLang  = toggleLang;
+window.toggleMenu  = toggleMenu;
+window.switchBilling = switchBilling;
+window.selectPlan  = selectPlan;
+window.showDashboard = showDashboard;
+
 function toast(msg, type='info') {
     const t = document.getElementById('site-toast');
     const colors = {info:'#1f2937', success:'#059669', error:'#dc2626'};
