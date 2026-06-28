@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Softora — برمجيات احترافية للأعمال">
+<title>Softora — برمجيات احترافية للأعمال</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a class="nav-logo" href="#home">
+            <div class="logo-icon">S</div>
+            <span>Softora</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="#home"     class="nav-link active" data-ar="الرئيسية"    data-en="Home">الرئيسية</a>
+            <a href="#products" class="nav-link"        data-ar="المنتجات"    data-en="Products">المنتجات</a>
+            <a href="#pricing"  class="nav-link"        data-ar="الأسعار"     data-en="Pricing">الأسعار</a>
+            <a href="#contact"  class="nav-link"        data-ar="تواصل معنا"  data-en="Contact">تواصل معنا</a>
+        </div>
+        <div class="nav-actions">
+            <button class="lang-btn" id="lang-btn" onclick="toggleLang()">EN</button>
+            <button class="btn-outline" onclick="showModal('login-modal')" data-ar="دخول" data-en="Login">دخول</button>
+            <button class="btn-primary-nav" onclick="showModal('register-modal')" data-ar="ابدأ مجاناً" data-en="Get Started">ابدأ مجاناً</button>
+            <button class="nav-toggle" id="nav-toggle" onclick="toggleMenu()"><i class="bi bi-list"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+        <div class="hero-badge">
+            <i class="bi bi-stars"></i>
+            <span data-ar="برمجيات احترافية للأعمال" data-en="Professional Business Software">برمجيات احترافية للأعمال</span>
+        </div>
+        <h1 class="hero-title">
+            <span data-ar="حلول برمجية" data-en="Software Solutions">حلول برمجية</span><br>
+            <span class="gradient-text" data-ar="تُحدث الفارق" data-en="That Make a Difference">تُحدث الفارق</span>
+        </h1>
+        <p class="hero-desc" data-ar="نبني برمجيات احترافية لسطح المكتب والويب تُساعد الأعمال على النمو بأمان وكفاءة عالية" data-en="We build professional desktop and web software that helps businesses grow securely and efficiently">
+            نبني برمجيات احترافية لسطح المكتب والويب تُساعد الأعمال على النمو بأمان وكفاءة عالية
+        </p>
+        <div class="hero-actions">
+            <button class="btn-hero-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+                <span data-ar="استكشف المنتجات" data-en="Explore Products">استكشف المنتجات</span>
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="btn-hero-outline" onclick="showModal('register-modal')">
+                <i class="bi bi-play-circle"></i>
+                <span data-ar="جرّب مجاناً" data-en="Try Free">جرّب مجاناً</span>
+            </button>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-num">+500</span>
+                <span class="stat-lbl" data-ar="عميل نشط" data-en="Active Clients">عميل نشط</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">99.9%</span>
+                <span class="stat-lbl" data-ar="وقت التشغيل" data-en="Uptime">وقت التشغيل</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">AES-256</span>
+                <span class="stat-lbl" data-ar="تشفير عسكري" data-en="Military Encryption">تشفير عسكري</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ FEATURES ══════════════ -->
+<section class="features-section">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background:#0057ff15;color:#0057ff;"><i class="bi bi-shield-fill-check"></i></div>
+                <h3 data-ar="أمان لا مثيل له" data-en="Unmatched Security">أمان لا مثيل له</h3>
+                <p data-ar="تشفير AES-256 لحماية بياناتك من أي تهديد" data-en="AES-256 encryption to protect your data from any threat">تشفير AES-256 لحماية بياناتك من أي تهديد</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:#7c3aed15;color:#7c3aed;"><i class="bi bi-lightning-fill"></i></div>
+                <h3 data-ar="أداء فائق السرعة" data-en="Lightning Performance">أداء فائق السرعة</h3>
+                <p data-ar="واجهات سلسة مُحسَّنة لأعلى أداء على جميع الأجهزة" data-en="Smooth interfaces optimized for peak performance on all devices">واجهات سلسة مُحسَّنة لأعلى أداء على جميع الأجهزة</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:#05966915;color:#059669;"><i class="bi bi-headset"></i></div>
+                <h3 data-ar="دعم متواصل" data-en="Continuous Support">دعم متواصل</h3>
+                <p data-ar="فريق دعم متخصص جاهز لمساعدتك في أي وقت" data-en="Specialized support team ready to help you at any time">فريق دعم متخصص جاهز لمساعدتك في أي وقت</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:#dc262615;color:#dc2626;"><i class="bi bi-arrow-repeat"></i></div>
+                <h3 data-ar="تحديثات مستمرة" data-en="Continuous Updates">تحديثات مستمرة</h3>
+                <p data-ar="ميزات جديدة وتحسينات أمنية بشكل دوري" data-en="New features and security improvements on a regular basis">ميزات جديدة وتحسينات أمنية بشكل دوري</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ PRODUCTS ══════════════ -->
+<section class="section" id="products">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag" data-ar="منتجاتنا" data-en="Our Products">منتجاتنا</div>
+            <h2 data-ar="برمجيات تُعزِّز إنتاجيتك" data-en="Software That Boosts Your Productivity">برمجيات تُعزِّز إنتاجيتك</h2>
+            <p data-ar="حلول مصممة لتلبية احتياجات الأعمال الحديثة" data-en="Solutions designed to meet modern business needs">حلول مصممة لتلبية احتياجات الأعمال الحديثة</p>
+        </div>
+        <div class="products-grid" id="products-grid">
+            <!-- يُجلب من API -->
+            <div class="product-card featured">
+                <div class="product-badge" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</div>
+                <div class="product-icon">🔒</div>
+                <div class="product-platform"><i class="bi bi-windows"></i> <span data-ar="سطح المكتب" data-en="Desktop">سطح المكتب</span></div>
+                <h3 data-ar="مدير الملفات الآمن" data-en="Secure File Manager">مدير الملفات الآمن</h3>
+                <p data-ar="إدارة وتشفير ملفاتك بأمان تام. احمِ بياناتك بتشفير AES-256 على جهازك." data-en="Manage and encrypt your files with complete security. Protect your data with AES-256 encryption on your device.">
+                    إدارة وتشفير ملفاتك بأمان تام. احمِ بياناتك بتشفير AES-256 على جهازك.
+                </p>
+                <ul class="product-features">
+                    <li><i class="bi bi-check-circle-fill"></i> <span data-ar="تشفير AES-256" data-en="AES-256 Encryption">تشفير AES-256</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i> <span data-ar="أقراص افتراضية" data-en="Virtual Drives">أقراص افتراضية</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i> <span data-ar="واجهة عربية" data-en="Arabic Interface">واجهة عربية</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i> <span data-ar="دعم فني متكامل" data-en="Full Technical Support">دعم فني متكامل</span></li>
+                </ul>
+                <div class="product-actions">
+                    <button class="btn-product-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
+                        <span data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</span>
+                    </button>
+                    <button class="btn-product-outline" onclick="showModal('register-modal')">
+                        <span data-ar="تجربة مجانية" data-en="Free Trial">تجربة مجانية</span>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card coming-soon">
+                <div class="product-icon">🌐</div>
+                <div class="product-platform"><i class="bi bi-globe"></i> <span data-ar="ويب" data-en="Web">ويب</span></div>
+                <h3 data-ar="نظام إدارة المشاريع" data-en="Project Management System">نظام إدارة المشاريع</h3>
+                <p data-ar="تتبع مشاريعك وفريقك بكفاءة عالية في مكان واحد." data-en="Track your projects and team efficiently in one place.">
+                    تتبع مشاريعك وفريقك بكفاءة عالية في مكان واحد.
+                </p>
+                <div class="coming-badge" data-ar="قريباً" data-en="Coming Soon">قريباً</div>
+            </div>
+            <div class="product-card coming-soon">
+                <div class="product-icon">📊</div>
+                <div class="product-platform"><i class="bi bi-globe"></i> <span data-ar="ويب" data-en="Web">ويب</span></div>
+                <h3 data-ar="نظام المحاسبة" data-en="Accounting System">نظام المحاسبة</h3>
+                <p data-ar="فواتير وتقارير مالية احترافية مصممة للسوق السعودي." data-en="Professional invoices and financial reports designed for the Saudi market.">
+                    فواتير وتقارير مالية احترافية مصممة للسوق السعودي.
+                </p>
+                <div class="coming-badge" data-ar="قريباً" data-en="Coming Soon">قريباً</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ PRICING ══════════════ -->
+<section class="section pricing-section" id="pricing">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag" data-ar="الأسعار" data-en="Pricing">الأسعار</div>
+            <h2 data-ar="باقات تناسب كل الأعمال" data-en="Plans for Every Business">باقات تناسب كل الأعمال</h2>
+            <p data-ar="اختر الباقة المناسبة لحجم عملك — جرّب مجاناً 14 يوماً بدون بطاقة بنكية" data-en="Choose the plan that suits your business size — try free for 14 days, no credit card required">اختر الباقة المناسبة لحجم عملك — جرّب مجاناً 14 يوماً بدون بطاقة بنكية</p>
+        </div>
+        <div class="billing-toggle">
+            <button class="billing-btn active" id="btn-monthly" onclick="switchBilling('monthly')" data-ar="شهري" data-en="Monthly">شهري</button>
+            <button class="billing-btn" id="btn-yearly" onclick="switchBilling('yearly')" data-ar="سنوي" data-en="Yearly">سنوي</button>
+            <span class="save-badge" data-ar="وفّر شهراً مجاناً" data-en="Save 1 month free">وفّر شهراً مجاناً</span>
+        </div>
+        <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="pricing-card">
+                <div class="plan-name">Starter</div>
+                <div class="plan-desc" data-ar="للمشاريع الصغيرة والناشئة" data-en="For small and startup projects">للمشاريع الصغيرة والناشئة</div>
+                <div class="plan-price">
+                    <div class="price-monthly">
+                        <span class="price-num">99</span><span class="price-currency" data-ar="ر.س/شهر" data-en="SAR/mo">ر.س/شهر</span>
+                        <div class="price-usd">~ $26/mo</div>
+                    </div>
+                    <div class="price-yearly" style="display:none;">
+                        <span class="price-num">990</span><span class="price-currency" data-ar="ر.س/سنة" data-en="SAR/yr">ر.س/سنة</span>
+                        <div class="price-usd">~ $264/yr</div>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="جهاز واحد" data-en="1 Device">جهاز واحد</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="جميع الميزات الأساسية" data-en="All core features">جميع الميزات الأساسية</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="تحديثات تلقائية" data-en="Automatic updates">تحديثات تلقائية</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="دعم عبر البريد" data-en="Email support">دعم عبر البريد</span></li>
+                    <li class="disabled"><i class="bi bi-x-lg"></i> <span data-ar="دعم أولوية" data-en="Priority support">دعم أولوية</span></li>
+                    <li class="disabled"><i class="bi bi-x-lg"></i> <span data-ar="مدير حساب مخصص" data-en="Dedicated account manager">مدير حساب مخصص</span></li>
+                </ul>
+                <button class="btn-plan" onclick="selectPlan('starter')" data-ar="ابدأ بـ Starter" data-en="Start with Starter">ابدأ بـ Starter</button>
+            </div>
+            <!-- Business -->
+            <div class="pricing-card popular">
+                <div class="popular-badge" data-ar="الأشهر" data-en="Most Popular">الأشهر</div>
+                <div class="plan-name">Business</div>
+                <div class="plan-desc" data-ar="للشركات المتوسطة والمتنامية" data-en="For medium and growing businesses">للشركات المتوسطة والمتنامية</div>
+                <div class="plan-price">
+                    <div class="price-monthly">
+                        <span class="price-num">299</span><span class="price-currency" data-ar="ر.س/شهر" data-en="SAR/mo">ر.س/شهر</span>
+                        <div class="price-usd">~ $80/mo</div>
+                    </div>
+                    <div class="price-yearly" style="display:none;">
+                        <span class="price-num">2,990</span><span class="price-currency" data-ar="ر.س/سنة" data-en="SAR/yr">ر.س/سنة</span>
+                        <div class="price-usd">~ $797/yr</div>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="حتى 5 أجهزة" data-en="Up to 5 devices">حتى 5 أجهزة</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="جميع الميزات" data-en="All features">جميع الميزات</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="تحديثات تلقائية" data-en="Automatic updates">تحديثات تلقائية</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="دعم أولوية" data-en="Priority support">دعم أولوية</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="تقارير متقدمة" data-en="Advanced reports">تقارير متقدمة</span></li>
+                    <li class="disabled"><i class="bi bi-x-lg"></i> <span data-ar="مدير حساب مخصص" data-en="Dedicated account manager">مدير حساب مخصص</span></li>
+                </ul>
+                <button class="btn-plan popular-btn" onclick="selectPlan('business')" data-ar="ابدأ بـ Business" data-en="Start with Business">ابدأ بـ Business</button>
+            </div>
+            <!-- Enterprise -->
+            <div class="pricing-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-desc" data-ar="للشركات الكبيرة والمؤسسات" data-en="For large companies and institutions">للشركات الكبيرة والمؤسسات</div>
+                <div class="plan-price">
+                    <div class="price-monthly">
+                        <span class="price-num">1,150</span><span class="price-currency" data-ar="ر.س/شهر" data-en="SAR/mo">ر.س/شهر</span>
+                        <div class="price-usd">~ $307/mo</div>
+                    </div>
+                    <div class="price-yearly" style="display:none;">
+                        <span class="price-num">11,500</span><span class="price-currency" data-ar="ر.س/سنة" data-en="SAR/yr">ر.س/سنة</span>
+                        <div class="price-usd">~ $3,067/yr</div>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="أجهزة غير محدودة" data-en="Unlimited devices">أجهزة غير محدودة</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="جميع الميزات" data-en="All features">جميع الميزات</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="تحديثات تلقائية" data-en="Automatic updates">تحديثات تلقائية</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="دعم أولوية 24/7" data-en="24/7 Priority support">دعم أولوية 24/7</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="تقارير متقدمة" data-en="Advanced reports">تقارير متقدمة</span></li>
+                    <li><i class="bi bi-check-lg"></i> <span data-ar="مدير حساب مخصص" data-en="Dedicated account manager">مدير حساب مخصص</span></li>
+                </ul>
+                <button class="btn-plan" onclick="selectPlan('enterprise')" data-ar="ابدأ بـ Enterprise" data-en="Start with Enterprise">ابدأ بـ Enterprise</button>
+            </div>
+        </div>
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+            <p data-ar="طرق الدفع المقبولة" data-en="Accepted Payment Methods">طرق الدفع المقبولة</p>
+            <div class="payment-icons">
+                <span class="pay-icon"><i class="bi bi-credit-card-2-front-fill"></i> Visa</span>
+                <span class="pay-icon"><i class="bi bi-credit-card-fill"></i> Mastercard</span>
+                <span class="pay-icon"><i class="bi bi-bank2"></i> Mada</span>
+                <span class="pay-icon"><i class="bi bi-apple"></i> Apple Pay</span>
+                <span class="pay-icon"><i class="bi bi-google"></i> Google Pay</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="section contact-section" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-tag" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</div>
+                <h2 data-ar="كيف يمكننا مساعدتك؟" data-en="How Can We Help You?">كيف يمكننا مساعدتك؟</h2>
+                <p data-ar="فريقنا جاهز للإجابة على استفساراتك وتقديم الدعم اللازم." data-en="Our team is ready to answer your inquiries and provide the necessary support.">فريقنا جاهز للإجابة على استفساراتك وتقديم الدعم اللازم.</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="bi bi-whatsapp"></i></div>
+                        <div>
+                            <div class="contact-item-title" data-ar="واتساب" data-en="WhatsApp">واتساب</div>
+                            <a href="https://wa.me/996531850070" class="contact-item-val">+996 531 850 070</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <div class="contact-item-title" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</div>
+                            <a href="mailto:hello@softora.io" class="contact-item-val">hello@softora.io</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-ar="الاسم" data-en="Name">الاسم</label>
+                            <input type="text" id="c-name" placeholder="أدخل اسمك" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                            <input type="email" id="c-email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الموضوع" data-en="Subject">الموضوع</label>
+                        <input type="text" id="c-subject" placeholder="موضوع رسالتك">
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الرسالة" data-en="Message">الرسالة</label>
+                        <textarea id="c-message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-contact-submit">
+                        <i class="bi bi-send-fill"></i>
+                        <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
+                    </button>
+                    <div id="contact-msg" style="display:none;margin-top:10px;font-size:13px;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo"><div class="logo-icon">S</div><span>Softora</span></div>
+                <p data-ar="برمجيات احترافية تُحدث الفارق في أعمالك" data-en="Professional software that makes a difference in your business">برمجيات احترافية تُحدث الفارق في أعمالك</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-ar="المنتجات" data-en="Products">المنتجات</h4>
+                <a href="#products" data-ar="مدير الملفات الآمن" data-en="Secure File Manager">مدير الملفات الآمن</a>
+                <a href="#products" data-ar="قريباً..." data-en="Coming soon...">قريباً...</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-ar="الشركة" data-en="Company">الشركة</h4>
+                <a href="#home" data-ar="من نحن" data-en="About">من نحن</a>
+                <a href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
+                <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-ar="الدعم" data-en="Support">الدعم</h4>
+                <a href="https://wa.me/996531850070">WhatsApp</a>
+                <a href="mailto:hello@softora.io">hello@softora.io</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-ar="© 2024 Softora. جميع الحقوق محفوظة." data-en="© 2024 Softora. All rights reserved.">© 2024 Softora. جميع الحقوق محفوظة.</span>
+            <div class="footer-legal">
+                <a href="#" onclick="showModal('terms-modal')" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+                <span>·</span>
+                <a href="#" onclick="showModal('privacy-modal')" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ══════════════ MODALS ══════════════ -->
+<!-- Login -->
+<div class="modal-overlay" id="login-modal">
+    <div class="modal-box auth-modal">
+        <button class="modal-close" onclick="hideModal('login-modal')"><i class="bi bi-x-lg"></i></button>
+        <div class="auth-modal-logo"><div class="logo-icon">S</div></div>
+        <h2 data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</h2>
+        <div id="login-err" class="auth-error" style="display:none;"></div>
+        <div class="form-group">
+            <label data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+            <input type="email" id="l-email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label data-ar="كلمة المرور" data-en="Password">كلمة المرور</label>
+            <input type="password" id="l-pass" placeholder="••••••••">
+        </div>
+        <button class="btn-auth" onclick="doLogin()" data-ar="دخول" data-en="Login">دخول</button>
+        <p class="auth-switch" data-ar='ليس لديك حساب؟ <a onclick="switchModal(\'login-modal\',\'register-modal\')">إنشاء حساب</a>' data-en='No account? <a onclick="switchModal(\'login-modal\',\'register-modal\')">Register</a>'>
+            ليس لديك حساب؟ <a onclick="switchModal('login-modal','register-modal')">إنشاء حساب</a>
+        </p>
+    </div>
+</div>
+
+<!-- Register -->
+<div class="modal-overlay" id="register-modal">
+    <div class="modal-box auth-modal">
+        <button class="modal-close" onclick="hideModal('register-modal')"><i class="bi bi-x-lg"></i></button>
+        <div class="auth-modal-logo"><div class="logo-icon">S</div></div>
+        <h2 data-ar="إنشاء حساب" data-en="Create Account">إنشاء حساب</h2>
+        <div id="reg-err" class="auth-error" style="display:none;"></div>
+        <div class="form-group">
+            <label data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
+            <input type="text" id="r-name" placeholder="اسمك الكامل">
+        </div>
+        <div class="form-group">
+            <label data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+            <input type="email" id="r-email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label data-ar="كلمة المرور" data-en="Password">كلمة المرور</label>
+            <input type="password" id="r-pass" placeholder="8 أحرف على الأقل">
+        </div>
+        <button class="btn-auth" onclick="doRegister()" data-ar="إنشاء الحساب" data-en="Create Account">إنشاء الحساب</button>
+        <p class="auth-switch">
+            <span data-ar="لديك حساب؟" data-en="Have an account?">لديك حساب؟</span>
+            <a onclick="switchModal('register-modal','login-modal')" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</a>
+        </p>
+    </div>
+</div>
+
+<!-- Dashboard -->
+<div class="modal-overlay" id="dashboard-modal">
+    <div class="modal-box dashboard-modal">
+        <button class="modal-close" onclick="hideModal('dashboard-modal');logout()"><i class="bi bi-box-arrow-right"></i></button>
+        <div class="dash-header">
+            <div class="dash-avatar" id="dash-avatar">م</div>
+            <div>
+                <div class="dash-name" id="dash-name">—</div>
+                <div class="dash-email" id="dash-email">—</div>
+            </div>
+        </div>
+        <div class="dash-section">
+            <div class="dash-section-title" data-ar="اشتراكاتي" data-en="My Subscriptions">اشتراكاتي</div>
+            <div id="dash-subs">
+                <div class="dash-empty" data-ar="لا توجد اشتراكات نشطة" data-en="No active subscriptions">لا توجد اشتراكات نشطة</div>
+            </div>
+        </div>
+        <div class="dash-section">
+            <div class="dash-section-title" data-ar="تحميل المنتجات" data-en="Download Products">تحميل المنتجات</div>
+            <div class="dash-downloads" id="dash-downloads">
+                <div class="download-item">
+                    <div><div class="download-name">Secure File Manager</div><div class="download-ver">v1.0.0 · Windows</div></div>
+                    <button class="btn-download" data-ar="تحميل" data-en="Download">تحميل</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div class="site-toast" id="site-toast"></div>
+
+
+<!-- Terms Modal -->
+<div class="modal-overlay" id="terms-modal">
+    <div class="modal-box legal-modal">
+        <button class="modal-close" onclick="hideModal('terms-modal')"><i class="bi bi-x-lg"></i></button>
+        <h2 data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</h2>
+        <div class="legal-date" data-ar="آخر تحديث: يناير 2025" data-en="Last updated: January 2025">آخر تحديث: يناير 2025</div>
+        <div class="legal-content">
+            <div class="legal-section">
+                <h3 data-ar="1. القبول بالشروط" data-en="1. Acceptance of Terms">1. القبول بالشروط</h3>
+                <p data-ar="باستخدامك لمنتجات وخدمات Softora فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام خدماتنا." data-en="By using Softora's products and services, you agree to be bound by these terms and conditions. If you do not agree to any part of these terms, please do not use our services.">
+                    باستخدامك لمنتجات وخدمات Softora فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام خدماتنا.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="2. الترخيص والاستخدام" data-en="2. License and Use">2. الترخيص والاستخدام</h3>
+                <p data-ar="تمنحك Softora ترخيصاً محدوداً وغير حصري وغير قابل للتحويل لاستخدام البرنامج وفقاً للباقة المشترك بها. يُحظر:" data-en="Softora grants you a limited, non-exclusive, non-transferable license to use the software according to your subscribed plan. It is prohibited to:">
+                    تمنحك Softora ترخيصاً محدوداً وغير حصري وغير قابل للتحويل لاستخدام البرنامج وفقاً للباقة المشترك بها. يُحظر:
+                </p>
+                <ul>
+                    <li data-ar="نسخ أو توزيع البرنامج أو أجزاء منه" data-en="Copying or distributing the software or parts thereof">نسخ أو توزيع البرنامج أو أجزاء منه</li>
+                    <li data-ar="عكس هندسة البرنامج أو محاولة استخراج الكود المصدري" data-en="Reverse engineering or attempting to extract source code">عكس هندسة البرنامج أو محاولة استخراج الكود المصدري</li>
+                    <li data-ar="تأجير أو إعادة بيع الترخيص لأطراف ثالثة" data-en="Renting or reselling the license to third parties">تأجير أو إعادة بيع الترخيص لأطراف ثالثة</li>
+                    <li data-ar="استخدام البرنامج لأغراض غير مشروعة" data-en="Using the software for illegal purposes">استخدام البرنامج لأغراض غير مشروعة</li>
+                </ul>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="3. الاشتراكات والدفع" data-en="3. Subscriptions and Payment">3. الاشتراكات والدفع</h3>
+                <p data-ar="تُجدَّد الاشتراكات تلقائياً في نهاية كل دورة فوترة. يحق لك إلغاء اشتراكك في أي وقت من لوحة حسابك. لا تُسترد الرسوم المدفوعة عن الفترات المنقضية." data-en="Subscriptions renew automatically at the end of each billing cycle. You may cancel your subscription at any time from your account dashboard. Fees paid for elapsed periods are non-refundable.">
+                    تُجدَّد الاشتراكات تلقائياً في نهاية كل دورة فوترة. يحق لك إلغاء اشتراكك في أي وقت من لوحة حسابك. لا تُسترد الرسوم المدفوعة عن الفترات المنقضية.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="4. سياسة الاسترداد" data-en="4. Refund Policy">4. سياسة الاسترداد</h3>
+                <p data-ar="نقدم ضماناً لاسترداد الأموال خلال 7 أيام من تاريخ الاشتراك الأول في حال عدم رضاك عن المنتج. بعد هذه الفترة لا يمكن استرداد المبالغ المدفوعة." data-en="We offer a 7-day money-back guarantee from the date of first subscription if you are not satisfied with the product. After this period, paid amounts cannot be refunded.">
+                    نقدم ضماناً لاسترداد الأموال خلال 7 أيام من تاريخ الاشتراك الأول في حال عدم رضاك عن المنتج. بعد هذه الفترة لا يمكن استرداد المبالغ المدفوعة.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="5. حدود المسؤولية" data-en="5. Limitation of Liability">5. حدود المسؤولية</h3>
+                <p data-ar="لا تتحمل Softora المسؤولية عن أي خسائر غير مباشرة أو عرضية ناتجة عن استخدام منتجاتنا. الحد الأقصى لمسؤوليتنا هو قيمة الاشتراك المدفوع خلال الشهر الأخير." data-en="Softora is not responsible for any indirect or incidental losses resulting from the use of our products. The maximum limit of our liability is the value of the subscription paid in the last month.">
+                    لا تتحمل Softora المسؤولية عن أي خسائر غير مباشرة أو عرضية ناتجة عن استخدام منتجاتنا. الحد الأقصى لمسؤوليتنا هو قيمة الاشتراك المدفوع خلال الشهر الأخير.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="6. التعديلات على الشروط" data-en="6. Modifications to Terms">6. التعديلات على الشروط</h3>
+                <p data-ar="تحتفظ Softora بحق تعديل هذه الشروط في أي وقت. سيتم إخطارك بأي تغييرات جوهرية عبر البريد الإلكتروني المسجل. استمرارك في استخدام الخدمة يعني قبولك للشروط المعدَّلة." data-en="Softora reserves the right to modify these terms at any time. You will be notified of any material changes via your registered email. Your continued use of the service means acceptance of the modified terms.">
+                    تحتفظ Softora بحق تعديل هذه الشروط في أي وقت. سيتم إخطارك بأي تغييرات جوهرية عبر البريد الإلكتروني المسجل. استمرارك في استخدام الخدمة يعني قبولك للشروط المعدَّلة.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="7. القانون المطبق" data-en="7. Governing Law">7. القانون المطبق</h3>
+                <p data-ar="تخضع هذه الشروط لأحكام نظام التجارة الإلكترونية في المملكة العربية السعودية وأنظمة هيئة الاتصالات وتقنية المعلومات." data-en="These terms are governed by the e-commerce regulations of the Kingdom of Saudi Arabia and the regulations of the Communications and Information Technology Commission.">
+                    تخضع هذه الشروط لأحكام نظام التجارة الإلكترونية في المملكة العربية السعودية وأنظمة هيئة الاتصالات وتقنية المعلومات.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Modal -->
+<div class="modal-overlay" id="privacy-modal">
+    <div class="modal-box legal-modal">
+        <button class="modal-close" onclick="hideModal('privacy-modal')"><i class="bi bi-x-lg"></i></button>
+        <h2 data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</h2>
+        <div class="legal-date" data-ar="آخر تحديث: يناير 2025" data-en="Last updated: January 2025">آخر تحديث: يناير 2025</div>
+        <div class="legal-content">
+            <div class="legal-section">
+                <h3 data-ar="1. المعلومات التي نجمعها" data-en="1. Information We Collect">1. المعلومات التي نجمعها</h3>
+                <p data-ar="نجمع المعلومات التالية عند تسجيلك واستخدامك لخدماتنا:" data-en="We collect the following information when you register and use our services:">
+                    نجمع المعلومات التالية عند تسجيلك واستخدامك لخدماتنا:
+                </p>
+                <ul>
+                    <li data-ar="الاسم والبريد الإلكتروني عند إنشاء الحساب" data-en="Name and email upon account creation">الاسم والبريد الإلكتروني عند إنشاء الحساب</li>
+                    <li data-ar="معلومات الجهاز (نوع النظام، معرّف الجهاز) لإدارة التراخيص" data-en="Device information (system type, device ID) for license management">معلومات الجهاز (نوع النظام، معرّف الجهاز) لإدارة التراخيص</li>
+                    <li data-ar="سجلات الاستخدام والنشاط داخل البرنامج" data-en="Usage logs and activity within the program">سجلات الاستخدام والنشاط داخل البرنامج</li>
+                    <li data-ar="معلومات الدفع (تُعالج بشكل آمن عبر بوابات الدفع المعتمدة)" data-en="Payment information (processed securely via approved payment gateways)">معلومات الدفع (تُعالج بشكل آمن عبر بوابات الدفع المعتمدة)</li>
+                </ul>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="2. كيف نستخدم معلوماتك" data-en="2. How We Use Your Information">2. كيف نستخدم معلوماتك</h3>
+                <ul>
+                    <li data-ar="تفعيل وإدارة اشتراكك وترخيصك" data-en="Activating and managing your subscription and license">تفعيل وإدارة اشتراكك وترخيصك</li>
+                    <li data-ar="إرسال إشعارات التحديثات والتجديد" data-en="Sending update and renewal notifications">إرسال إشعارات التحديثات والتجديد</li>
+                    <li data-ar="تقديم الدعم الفني وحل المشكلات" data-en="Providing technical support and problem resolution">تقديم الدعم الفني وحل المشكلات</li>
+                    <li data-ar="تحسين منتجاتنا وخدماتنا" data-en="Improving our products and services">تحسين منتجاتنا وخدماتنا</li>
+                </ul>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="3. أمان البيانات" data-en="3. Data Security">3. أمان البيانات</h3>
+                <p data-ar="نستخدم تشفير AES-256 لحماية بياناتك. ملفاتك تُخزَّن وتُشفَّر محلياً على جهازك ولا تُرفع لخوادمنا أبداً. نحن نحتفظ فقط ببيانات الحساب والترخيص." data-en="We use AES-256 encryption to protect your data. Your files are stored and encrypted locally on your device and are never uploaded to our servers. We only retain account and license data.">
+                    نستخدم تشفير AES-256 لحماية بياناتك. ملفاتك تُخزَّن وتُشفَّر محلياً على جهازك ولا تُرفع لخوادمنا أبداً. نحن نحتفظ فقط ببيانات الحساب والترخيص.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="4. مشاركة المعلومات" data-en="4. Information Sharing">4. مشاركة المعلومات</h3>
+                <p data-ar="لا نبيع أو نؤجر أو نشارك معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:" data-en="We do not sell, rent or share your personal information with third parties except in the following cases:">
+                    لا نبيع أو نؤجر أو نشارك معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
+                </p>
+                <ul>
+                    <li data-ar="معالجة المدفوعات عبر بوابات الدفع المعتمدة" data-en="Payment processing via approved payment gateways">معالجة المدفوعات عبر بوابات الدفع المعتمدة</li>
+                    <li data-ar="الامتثال للمتطلبات القانونية أو أوامر المحاكم" data-en="Compliance with legal requirements or court orders">الامتثال للمتطلبات القانونية أو أوامر المحاكم</li>
+                </ul>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="5. حقوقك" data-en="5. Your Rights">5. حقوقك</h3>
+                <ul>
+                    <li data-ar="الوصول إلى بياناتك الشخصية وتصحيحها" data-en="Access and correct your personal data">الوصول إلى بياناتك الشخصية وتصحيحها</li>
+                    <li data-ar="طلب حذف حسابك وبياناتك" data-en="Request deletion of your account and data">طلب حذف حسابك وبياناتك</li>
+                    <li data-ar="إلغاء الاشتراك في الرسائل التسويقية" data-en="Unsubscribe from marketing messages">إلغاء الاشتراك في الرسائل التسويقية</li>
+                    <li data-ar="تقديم شكوى لهيئة الاتصالات وتقنية المعلومات" data-en="File a complaint with the Communications and Information Technology Commission">تقديم شكوى لهيئة الاتصالات وتقنية المعلومات</li>
+                </ul>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="6. ملفات تعريف الارتباط (Cookies)" data-en="6. Cookies">6. ملفات تعريف الارتباط (Cookies)</h3>
+                <p data-ar="نستخدم ملفات تعريف الارتباط الضرورية فقط للحفاظ على جلسة تسجيل دخولك. لا نستخدم ملفات تعريف الارتباط التتبعية أو الإعلانية." data-en="We use only essential cookies to maintain your login session. We do not use tracking or advertising cookies.">
+                    نستخدم ملفات تعريف الارتباط الضرورية فقط للحفاظ على جلسة تسجيل دخولك. لا نستخدم ملفات تعريف الارتباط التتبعية أو الإعلانية.
+                </p>
+            </div>
+            <div class="legal-section">
+                <h3 data-ar="7. التواصل معنا" data-en="7. Contact Us">7. التواصل معنا</h3>
+                <p data-ar="لأي استفسارات تتعلق بخصوصيتك تواصل معنا:" data-en="For any privacy-related inquiries, contact us:">
+                    لأي استفسارات تتعلق بخصوصيتك تواصل معنا:
+                </p>
+                <p><strong>privacy@softora.io</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terms Modal -->
+<div class="modal-overlay" id="terms-modal">
+    <div class="modal-box legal-modal">
+        <button class="modal-close" onclick="hideModal('terms-modal')"><i class="bi bi-x-lg"></i></button>
+        <h2 data-ar="شروط الاستخدام" data-en="Terms of Use">شروط الاستخدام</h2>
+        <div class="legal-content">
+            <div data-ar data-en style="display:none;"></div>
+            <div class="legal-ar">
+                <p class="legal-date">آخر تحديث: يناير 2024</p>
+
+                <h3>1. القبول بالشروط</h3>
+                <p>باستخدامك لمنتجات وخدمات Softora، فإنك توافق على الالتزام بشروط الاستخدام هذه. إذا كنت لا توافق على هذه الشروط، يرجى التوقف عن استخدام خدماتنا.</p>
+
+                <h3>2. الترخيص والاستخدام</h3>
+                <p>تمنحك Softora ترخيصًا محدودًا وغير حصري وغير قابل للتحويل لاستخدام البرمجيات وفقًا للخطة المشترك بها. يُحظر:</p>
+                <ul>
+                    <li>إعادة بيع أو توزيع البرمجيات</li>
+                    <li>إجراء هندسة عكسية أو تفكيك البرمجيات</li>
+                    <li>استخدام البرمجيات لأغراض غير مشروعة</li>
+                    <li>مشاركة بيانات اعتماد الحساب مع أطراف ثالثة</li>
+                </ul>
+
+                <h3>3. الاشتراكات والدفع</h3>
+                <p>تُجدَّد الاشتراكات تلقائيًا في نهاية كل فترة اشتراك. يمكنك إلغاء اشتراكك في أي وقت من لوحة حسابك. لا تُردّ المبالغ المدفوعة عن الفترة الحالية.</p>
+
+                <h3>4. حدود المسؤولية</h3>
+                <p>لا تتحمل Softora المسؤولية عن أي أضرار غير مباشرة أو عرضية أو تبعية ناتجة عن استخدام أو عدم القدرة على استخدام خدماتنا.</p>
+
+                <h3>5. إنهاء الخدمة</h3>
+                <p>تحتفظ Softora بالحق في إنهاء أو تعليق حسابك في حالة انتهاك هذه الشروط، مع إشعار مسبق قدر الإمكان.</p>
+
+                <h3>6. التعديلات</h3>
+                <p>تحتفظ Softora بالحق في تعديل هذه الشروط في أي وقت. سيتم إشعارك بأي تغييرات جوهرية عبر البريد الإلكتروني المسجل.</p>
+
+                <h3>7. القانون الواجب التطبيق</h3>
+                <p>تخضع هذه الشروط لأنظمة المملكة العربية السعودية وتُفسَّر وفقًا لها.</p>
+
+                <h3>8. التواصل</h3>
+                <p>لأي استفسارات بشأن شروط الاستخدام: <a href="mailto:legal@softora.io">legal@softora.io</a></p>
+            </div>
+
+            <div class="legal-en" style="display:none;">
+                <p class="legal-date">Last updated: January 2024</p>
+
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using Softora products and services, you agree to be bound by these Terms of Use. If you do not agree to these terms, please stop using our services.</p>
+
+                <h3>2. License and Use</h3>
+                <p>Softora grants you a limited, non-exclusive, non-transferable license to use the software according to your subscribed plan. The following are prohibited:</p>
+                <ul>
+                    <li>Reselling or distributing the software</li>
+                    <li>Reverse engineering or disassembling the software</li>
+                    <li>Using the software for illegal purposes</li>
+                    <li>Sharing account credentials with third parties</li>
+                </ul>
+
+                <h3>3. Subscriptions and Payment</h3>
+                <p>Subscriptions renew automatically at the end of each subscription period. You can cancel your subscription at any time from your account dashboard. Payments for the current period are non-refundable.</p>
+
+                <h3>4. Limitation of Liability</h3>
+                <p>Softora is not liable for any indirect, incidental, or consequential damages resulting from the use or inability to use our services.</p>
+
+                <h3>5. Termination</h3>
+                <p>Softora reserves the right to terminate or suspend your account for violation of these terms, with prior notice where possible.</p>
+
+                <h3>6. Modifications</h3>
+                <p>Softora reserves the right to modify these terms at any time. You will be notified of any material changes via your registered email.</p>
+
+                <h3>7. Governing Law</h3>
+                <p>These terms are governed by and construed in accordance with the laws of Saudi Arabia.</p>
+
+                <h3>8. Contact</h3>
+                <p>For any inquiries about these terms: <a href="mailto:legal@softora.io">legal@softora.io</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Modal -->
+<div class="modal-overlay" id="privacy-modal">
+    <div class="modal-box legal-modal">
+        <button class="modal-close" onclick="hideModal('privacy-modal')"><i class="bi bi-x-lg"></i></button>
+        <h2 data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</h2>
+        <div class="legal-content">
+            <div class="legal-ar">
+                <p class="legal-date">آخر تحديث: يناير 2024</p>
+
+                <h3>1. البيانات التي نجمعها</h3>
+                <p>عند استخدامك لخدمات Softora، نقوم بجمع:</p>
+                <ul>
+                    <li><strong>بيانات الحساب:</strong> الاسم والبريد الإلكتروني وكلمة المرور المشفرة</li>
+                    <li><strong>بيانات الاستخدام:</strong> معلومات عن كيفية استخدامك للبرامج</li>
+                    <li><strong>بيانات الجهاز:</strong> معرّف الجهاز ونظام التشغيل للتحقق من الترخيص</li>
+                    <li><strong>بيانات التواصل:</strong> الرسائل المرسلة عبر نماذج التواصل</li>
+                </ul>
+
+                <h3>2. كيف نستخدم بياناتك</h3>
+                <p>نستخدم بياناتك من أجل:</p>
+                <ul>
+                    <li>تقديم وتحسين خدماتنا</li>
+                    <li>إدارة حسابك واشتراكك</li>
+                    <li>التحقق من صلاحية الترخيص</li>
+                    <li>إرسال تحديثات وإشعارات مهمة</li>
+                    <li>تقديم الدعم الفني</li>
+                </ul>
+
+                <h3>3. حماية البيانات</h3>
+                <p>نلتزم بحماية بياناتك الشخصية من خلال:</p>
+                <ul>
+                    <li>تشفير كلمات المرور بخوارزمية bcrypt</li>
+                    <li>تشفير الاتصالات بـ HTTPS/TLS</li>
+                    <li>تشفير بيانات الترخيص المحلية بـ AES-256</li>
+                    <li>تقييد الوصول للبيانات على موظفين مرخّصين فقط</li>
+                </ul>
+
+                <h3>4. مشاركة البيانات</h3>
+                <p>لا نبيع بياناتك الشخصية لأي طرف ثالث. قد نشارك بياناتك فقط في الحالات التالية:</p>
+                <ul>
+                    <li>بموافقتك الصريحة</li>
+                    <li>للامتثال لمتطلبات قانونية</li>
+                    <li>لمعالجة المدفوعات عبر بوابات دفع موثوقة</li>
+                </ul>
+
+                <h3>5. ملفات تعريف الارتباط (Cookies)</h3>
+                <p>نستخدم ملفات تعريف الارتباط لتحسين تجربتك وإبقائك مسجل الدخول. يمكنك إلغاء تفعيلها من إعدادات المتصفح.</p>
+
+                <h3>6. حقوقك</h3>
+                <p>لديك الحق في:</p>
+                <ul>
+                    <li>الاطلاع على بياناتك الشخصية المحفوظة</li>
+                    <li>تصحيح أو تحديث بياناتك</li>
+                    <li>طلب حذف حسابك وبياناتك</li>
+                    <li>سحب موافقتك على معالجة البيانات</li>
+                </ul>
+
+                <h3>7. الاحتفاظ بالبيانات</h3>
+                <p>نحتفظ ببياناتك طالما حسابك نشط. عند حذف الحساب، يتم حذف بياناتك خلال 30 يومًا.</p>
+
+                <h3>8. التواصل</h3>
+                <p>لأي استفسارات حول خصوصيتك: <a href="mailto:privacy@softora.io">privacy@softora.io</a></p>
+            </div>
+
+            <div class="legal-en" style="display:none;">
+                <p class="legal-date">Last updated: January 2024</p>
+
+                <h3>1. Data We Collect</h3>
+                <p>When you use Softora services, we collect:</p>
+                <ul>
+                    <li><strong>Account data:</strong> Name, email, and encrypted password</li>
+                    <li><strong>Usage data:</strong> Information about how you use our software</li>
+                    <li><strong>Device data:</strong> Device ID and OS for license verification</li>
+                    <li><strong>Communication data:</strong> Messages sent through contact forms</li>
+                </ul>
+
+                <h3>2. How We Use Your Data</h3>
+                <p>We use your data to:</p>
+                <ul>
+                    <li>Provide and improve our services</li>
+                    <li>Manage your account and subscription</li>
+                    <li>Verify license validity</li>
+                    <li>Send important updates and notifications</li>
+                    <li>Provide technical support</li>
+                </ul>
+
+                <h3>3. Data Protection</h3>
+                <p>We protect your personal data through:</p>
+                <ul>
+                    <li>Password encryption with bcrypt</li>
+                    <li>HTTPS/TLS communication encryption</li>
+                    <li>Local license data encryption with AES-256</li>
+                    <li>Restricting data access to authorized staff only</li>
+                </ul>
+
+                <h3>4. Data Sharing</h3>
+                <p>We do not sell your personal data. We may share your data only in the following cases:</p>
+                <ul>
+                    <li>With your explicit consent</li>
+                    <li>To comply with legal requirements</li>
+                    <li>For payment processing through trusted gateways</li>
+                </ul>
+
+                <h3>5. Cookies</h3>
+                <p>We use cookies to improve your experience and keep you logged in. You can disable them from your browser settings.</p>
+
+                <h3>6. Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your stored personal data</li>
+                    <li>Correct or update your data</li>
+                    <li>Request deletion of your account and data</li>
+                    <li>Withdraw consent for data processing</li>
+                </ul>
+
+                <h3>7. Data Retention</h3>
+                <p>We retain your data as long as your account is active. Upon account deletion, your data is removed within 30 days.</p>
+
+                <h3>8. Contact</h3>
+                <p>For privacy inquiries: <a href="mailto:privacy@softora.io">privacy@softora.io</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
